@@ -1,0 +1,138 @@
+.promo {
+  padding: 0 calc(50% - 711px) 127px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $extra-desktop-width - 1) {
+    padding: 0 calc(50% - 480px) 278px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0 calc(50% - 296px) 163px;
+    display: block;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 0 calc(50% - 145px) 70px;
+  }
+}
+
+.promo h1 {
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  margin: 0 0 31px 0;
+
+  @media (max-width: $desktop-width - 1) {
+    font-size: 60px;
+    line-height: 70px;
+    width: 393px;
+    margin: 0 0 29px 0;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 40px;
+    line-height: 47px;
+
+    width: 280px;
+    margin: 0 0 27px 0;
+  }
+}
+
+.promo p {
+  font-family: "PT Mono";
+  font-size: 22px;
+  line-height: 34px;
+  text-transform: lowercase;
+
+  width: 739px;
+  margin: 0 0 39px 0;
+  padding: 0 0 0 100px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $white;
+    width: 66px;
+    height: 2px;
+    position: absolute;
+    left: 5px;
+    top: 14px;
+
+    @media (max-width: $desktop-width - 1) {
+      width: 33px;
+      left: 3px;
+      top: 16px;
+    }
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    font-size: 18px;
+    line-height: 28px;
+
+    width: 547px;
+    padding: 0 0 0 51px;
+    margin: 0 0 55px 0;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 16px;
+    line-height: 25px;
+
+    width: 280px;
+    margin: 0 0 40px;
+  }
+}
+
+.promo .promo__to-feedback-block {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $blue-1;
+
+  text-align: center;
+  width: 407px;
+  padding: 17px 28px 19px;
+  margin-left: 100px;
+  margin-bottom: 133px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    margin-left: 50px;
+    margin-bottom: 0;
+    width: 379px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 287px;
+    margin: 0;
+  }
+}
+
+.promo .promo__to-advantages-block {
+  font-family: "PT Mono";
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+  transform: rotate(-90deg) translateY(-31px);
+  width: max-content;
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}

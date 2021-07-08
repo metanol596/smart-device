@@ -1,0 +1,91 @@
+.page-body__header-wrap {
+  background-image:
+    url("../img/chips-bg.png"),
+    url("../img/header-triangles.svg"),
+    url("../img/chips-bg-3.png");
+  background-repeat: no-repeat;
+  background-size:
+    705px 515px,
+    671px 641px,
+    cover;
+  background-position:
+    right 180px bottom 103px,
+    right 219px bottom 119px,
+    center;
+
+  @media (max-width: 1440px) {
+    background-image:
+      url("../img/chips-bg.png"),
+      url("../img/header-triangles.svg"),
+      url("../img/chips-bg-3.png");
+    background-repeat: no-repeat;
+    background-size:
+      705px 515px,
+      671px 641px,
+      cover;
+    background-position:
+      right -115px bottom 15px,
+      right 219px bottom 119px,
+      center;
+  }
+
+  @media (max-width: $desktop-width) {
+    background-image:
+      url("../img/chips-bg.png"),
+      url("../img/header-triangles.svg"),
+      url("../img/chips-bg-3.png");
+    background-repeat: no-repeat;
+     background-size:
+      705px 515px,
+      671px 641px,
+      cover;
+    background-position:
+      right -246px bottom -106px,
+      right 219px bottom 119px,
+      center;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    background-image:
+      url("../img/chips-bg-tablet.png"),
+      url("../img/header-triangles.svg"),
+      url("../img/chips-bg-3.png");
+    background-repeat: no-repeat;
+    background-size:
+      260px 340px,
+      529px 506px,
+      cover;
+    background-position:
+      right 0 top 114px,
+      right -199px top -39px,
+      center;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    background-image:
+      url("../img/chips-bg-mobile.png"),
+      url("../img/header-triangles.svg"),
+      url("../img/chips-bg-3.png");
+    background-repeat: no-repeat;
+    background-size:
+      294px 220px,
+      505px 483px,
+      cover;
+    background-position:
+      right 0 top 92px,
+      right -337px top -46px,
+      center;
+  }
+}
+
+.page-body__page-header {
+  margin-bottom: 226px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 113px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 228px;
+  }
+}
