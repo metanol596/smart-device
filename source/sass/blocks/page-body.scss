@@ -13,6 +13,10 @@
     right 219px bottom 119px,
     center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/chips-bg@2x.png");
+  }
+
   @media (max-width: 1440px) {
     background-image:
       url("../img/chips-bg.png"),
@@ -59,6 +63,10 @@
       right 0 top 114px,
       right -199px top -39px,
       center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/chips-bg-tablet@2x.png");
+    }
   }
 
   @media (max-width: $mobile-only-width) {
@@ -75,6 +83,10 @@
       right 0 top 92px,
       right -337px top -46px,
       center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/chips-bg-mobile@2x.png");
+    }
   }
 }
 
