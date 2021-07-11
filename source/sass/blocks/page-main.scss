@@ -1,0 +1,38 @@
+.page-main {
+  background-image:
+    url("../img/triangle298x298rotate.svg"),
+    url("../img/triangle298x298.svg"),
+    url("../img/big-triangle637x640rotate.svg"),
+    url("../img/big-triangle637x640.svg");
+  background-repeat: no-repeat;
+  background-position:
+    202px 45px,
+    right 28px top 395px,
+    53% 145px,
+    left -205px bottom -464px;
+
+  @media (max-width: $desktop-width - 1) {
+    background-image:
+      none,
+      none,
+      url("../img/big-triangle637x640rotate.svg"),
+      none;
+      background-position: right -314px bottom -280px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    background-position: right -432px bottom -267px;
+  }
+}
+
+.page-main__advantages {
+  margin-bottom: 110px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 61px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 68px;
+  }
+}

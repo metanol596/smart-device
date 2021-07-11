@@ -1,0 +1,114 @@
+.advantages {
+  padding-top: 111px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-top: 54px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding-top: 37px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 570px);
+  grid-template-rows: repeat(2, minmax(301px,1fr));
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+
+  @media (max-width: 1250px) {
+    grid-template-columns: repeat(2, 465px);
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    display: grid;
+    grid-template-columns: repeat(2, 345px);
+    grid-template-rows: repeat(2, minmax(232px, max-content));
+  }
+
+  @media (max-width: $mobile-only-width) {
+    display: grid;
+    grid-template-columns: 290px;
+    grid-template-rows: repeat(4, minmax(232px, max-content));
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
+
+.advantages__item {
+  border: 1px solid $grey-3;
+  border-left: 3px solid $blue-1;
+  padding: 42px 41px 49px 45px;
+
+  background-color: $white;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 20px 20px 20px 25px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 25px 12px 23px 24px;
+  }
+}
+
+.advantages__item-icon-wrap {
+  margin-bottom: 17px;
+  display: inline-flex;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 12px;
+  }
+}
+
+.advantages__item h3,
+.advantages__item p {
+  margin: 0;
+}
+
+.advantages__item h3 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $blue-1;
+
+  margin-bottom: 18px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantages__item p {
+  font-family: "PT Mono";
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-3;
+
+  width: 480px;
+
+  @media (max-width: 1250px) {
+    width: 317px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    width: 289px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 249px;
+  }
+}
+
+.advantages__item svg {
+  fill: $blue-1;
+}

@@ -122,6 +122,24 @@
   }
 }
 
+.promo__to-feedback--link-desktop {
+  display: inline-block;
+  vertical-align: middle;
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.promo__to-feedback--link-not-desktop {
+  display: none;
+
+  @media (max-width: $desktop-width - 1) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .promo .promo__to-advantages-block {
   font-family: "PT Mono";
   font-size: 14px;
