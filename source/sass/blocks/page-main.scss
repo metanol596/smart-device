@@ -9,7 +9,7 @@
     202px 45px,
     right 28px top 395px,
     53% 145px,
-    left -205px bottom -464px;
+    left -205px bottom -52px;
 
   @media (max-width: $desktop-width - 1) {
     background-image:
@@ -26,13 +26,13 @@
 }
 
 .page-main__advantages {
-  margin-bottom: 110px;
+  margin-bottom: 101px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 61px;
+    margin-bottom: 52px;
   }
 
   @media (max-width: $mobile-only-width) {
-    margin-bottom: 68px;
+    margin-bottom: 64px;
   }
 }
