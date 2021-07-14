@@ -1,3 +1,16 @@
+.page-body__shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+.page-body__shadow.active {
+  display: block;
+}
+
 .page-body__header-wrap {
   background-image:
     url("../img/chips-bg.png"),

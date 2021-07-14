@@ -1,0 +1,171 @@
+.popup {
+  background-color: $blue-1;
+
+  display: none;
+  width: 490px;
+  height: 605px;
+  padding: 30px 39px 36px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 101;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup__inner-wrap {
+  position: relative;
+}
+
+.popup__close-button {
+  background-color: transparent;
+  cursor: pointer;
+
+  position: absolute;
+  padding: 0;
+  border: none;
+  right: 20px;
+  top: 20px;
+}
+
+.popup h2 {
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+
+  margin: 0 0 12px;
+}
+
+.popup p {
+  font-family: "PT Mono";
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: 0 0 32px;
+  width: 403px;
+}
+
+.popup__form input,
+.popup__form textarea {
+  background-color: rgba($white, 0.1);
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+
+  border: none;
+
+  &:hover {
+    outline: 1px solid $blue-2;
+    outline-offset: 0;
+    outline-style: auto;
+  }
+}
+
+.popup__form textarea {
+  resize: none;
+
+  width: 100%;
+  padding: 11px 24px;
+  height: 104px;
+  margin-bottom: 26px;
+}
+
+.popup__form input {
+  width: 100%;
+  padding: 13px 24px 17px;
+  margin-bottom: 30px;
+}
+
+.popup__form input:focus,
+.popup__form textarea:focus {
+  color: $black;
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  background-color: $white;
+}
+
+.popup__form input::placeholder,
+.popup__form textarea::placeholder {
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.popup__form button {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  cursor: pointer;
+
+  background-color: transparent;
+
+  text-align: center;
+  border: 1px solid $white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 36px;
+
+  &:hover {
+    background-color: $white;
+    color: $blue-1;
+  }
+}
+
+.popup__form-consent-checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.popup__form-consent-checkbox-wrap input {
+  width: 1px;
+}
+
+.popup__form-consent-checkbox-wrap label {
+  font-family: "PT Mono";
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+
+  opacity: 0.8;
+  cursor: pointer;
+
+  display: inline-flex;
+  vertical-align: middle;
+  width: 409px;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    display: block;
+    margin-right: 32px;
+  }
+}
+
+.popup__form-consent-checkbox-wrap input:checked + label::before {
+  background-image: url("../img/checked.svg");
+  background-size: 8px 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

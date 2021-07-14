@@ -133,6 +133,7 @@
 }
 
 .feedback__form textarea {
+  resize: none;
   padding: 11px 17px;
   margin-bottom: 42px;
 
@@ -237,7 +238,9 @@
   font-size: 14px;
   line-height: 16px;
   color: $white;
+
   opacity: 0.8;
+  cursor: pointer;
 
   display: inline-flex;
   vertical-align: middle;
