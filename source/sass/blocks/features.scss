@@ -1,0 +1,141 @@
+.features {
+  background-color: $black-2;
+
+  min-height: 650px;
+  padding: 88px calc(50% - 585px) 127px;
+
+  @media (max-width: 1200px) {
+    padding: 50px calc(50% - 360px) 78px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 50px calc(50% - 149px) 64px;
+  }
+}
+
+.features h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  margin: 0 0 52px;
+
+  @media (max-width: 1200px) {
+    font-size: 32px;
+    line-height: 45px;
+
+    width: 632px;
+    margin: 0 0 49px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 28px;
+    line-height: 39px;
+
+    width: 299px;
+    margin: 0 0 42px 10px;
+  }
+}
+
+.features__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  column-gap: 30px;
+  row-gap: 30px;
+  min-height: 620px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 715px;
+    grid-template-rows: repeat(3, minmax(256px, 1fr));
+    justify-content: center;
+    row-gap: 46px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    grid-template-columns: 290px;
+    row-gap: 30px;
+  }
+}
+
+.features__item {
+  position: relative;
+
+  &:hover {
+    outline: 1px solid $blue-1;
+  }
+}
+
+.features__item a {
+  color: $white;
+
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 620px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    min-height: 256px;
+  }
+}
+
+.features__item h3 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  margin: 0;
+  padding: 49px 0 0 43px;
+  width: 216px;
+
+  @media (max-width: 1200px) {
+    padding: 40px 0 0 42px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 20px 0 0 35px;
+  }
+}
+
+.features__item span {
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 26px 29px;
+  background-color: $blue-1 ;
+
+  @media (max-width: 1200px) {
+    right: -3px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    right: 0;
+  }
+}
+
+.features__item svg {
+  fill: $white;
+}
+
+.features__item img {
+  position: absolute;
+  top: 0;
+
+  opacity: 0.2;
+  object-fit: cover;
+  width: 370px;
+
+  @media (max-width: 1200px) {
+    width: 720px;
+    height: 256px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 290px;
+  }
+}

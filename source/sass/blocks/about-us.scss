@@ -4,14 +4,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 calc(50% - 580px) 110px;
+  padding: 0 calc(50% - 580px) 99px;
 
   @media (max-width: 1200px) {
-    padding: 0 calc(50% - 488px) 110px;
+    padding: 0 calc(50% - 488px) 74px;
   }
 
   @media (max-width: $mobile-only-width) {
-    padding: 0;
+    padding: 0 0 54px;
   }
 }
 
@@ -28,13 +28,13 @@
   }
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/2005-teablet.png");
+    background-image: url("../img/2005-tablet.png");
     background-position: left -18px bottom 1px;
 
     padding-left: 195px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/2005-teablet@2x.png");
+      background-image: url("../img/2005-tablet@2x.png");
     }
   }
 

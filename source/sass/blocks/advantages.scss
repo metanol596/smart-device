@@ -47,6 +47,11 @@
 
   background-color: $white;
 
+  &:hover {
+    border-color: $blue-1;
+    background-color: $blue-1;
+  }
+
   @media (max-width: $desktop-width - 1) {
     padding: 20px 20px 20px 25px;
   }
@@ -68,6 +73,11 @@
 .advantages__item h3,
 .advantages__item p {
   margin: 0;
+}
+
+.advantages__item:hover h3,
+.advantages__item:hover p {
+  color: $white;
 }
 
 .advantages__item h3 {
@@ -111,4 +121,8 @@
 
 .advantages__item svg {
   fill: $blue-1;
+}
+
+.advantages__item:hover svg {
+  fill: $white;
 }
