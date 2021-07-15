@@ -196,16 +196,16 @@
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <div class="feedback__form-inner-up-wrap">
             <label class="visually-hidden" for="name-field"></label>
-            <input type="text" name="name-field" id="name-field" placeholder="Имя">
+            <input type="text" name="name-field" id="name-field" placeholder="Имя" required>
             <label class="visually-hidden" for="phone-field"></label>
-            <input type="tel" name="phone-field" id="phone-field" placeholder="Телефон">
+            <input type="tel" name="phone-field" id="phone-field" placeholder="Телефон" required>
           </div>
           <label class="visually-hidden" for="feedback-field">Ваш вопрос</label>
           <textarea name="feedback" id="feedback-field" cols="53" rows="6" placeholder="Ваш вопрос"></textarea>
           <div class="feedback__form-inner-down-wrap">
             <button type="submit">Задать вопрос</button>
             <div class="feedback__form-consent-checkbox-wrap">
-              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked>
+              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked required>
               <label for="consent">Я согласен на обработку персональных данных</label>
             </div>
           </div>
