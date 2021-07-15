@@ -6,10 +6,6 @@ const popupNameInput = popup.querySelector('.popup__form-name-input');
 const popupInputs = popup.querySelectorAll('.for-storage');
 const popupForm = popup.querySelector('.popup__form');
 
-
-
-
-
 const onPopupCloseButtonClick = () => {
 	popup.classList.remove('active');
 	popupShadowBg.classList.remove('active');
@@ -36,6 +32,7 @@ const onPopupButtonClick = () => {
 	if (!popup.classList.contains('active')) {
 		popup.classList.add('active');
 		popupShadowBg.classList.add('active');
+		document.body.classList.add('page-body--no-scroll');
 		popupNameInput.focus();
 
 		popupInputs.forEach((item) => {
@@ -44,9 +41,10 @@ const onPopupButtonClick = () => {
 		});
 	} else {
 		popupShadowBg.classList.remove('active');
+		document.body.classList.remove('page-body--no-scroll');
 	}
 };
-for(let key,i=0;i<localStorage.length;i++) key=localStorage.key(i),console.log(key,':', localStorage.getItem(key));
+
 popupButton.addEventListener('click', onPopupButtonClick);
 popupCloseButton.addEventListener('click', onPopupCloseButtonClick);
 popup.addEventListener('click', onPopupClick);

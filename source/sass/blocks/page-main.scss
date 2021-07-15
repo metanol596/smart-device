@@ -9,7 +9,7 @@
     202px 45px,
     right 28px top 395px,
     53% 145px,
-    left -205px bottom -52px;
+    left -205px top 446px;
 
   @media (max-width: $desktop-width - 1) {
     background-image:
@@ -17,7 +17,7 @@
       none,
       url("../img/big-triangle637x640rotate.svg"),
       none;
-      background-position: right -314px bottom -280px;
+    background-position: right -314px bottom -280px;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -29,7 +29,7 @@
   margin-bottom: 101px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 52px;
+    margin-bottom: 57px;
   }
 
   @media (max-width: $mobile-only-width) {

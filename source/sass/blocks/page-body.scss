@@ -1,3 +1,7 @@
+.page-body--no-scroll {
+  overflow-y: hidden;
+}
+
 .page-body__shadow {
   width: 100%;
   height: 100%;
@@ -25,6 +29,7 @@
     right 180px bottom 103px,
     right 219px bottom 119px,
     center;
+  background-color: $green;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/chips-bg@2x.png");
@@ -52,7 +57,7 @@
       url("../img/header-triangles.svg"),
       url("../img/chips-bg-3.png");
     background-repeat: no-repeat;
-     background-size:
+    background-size:
       705px 515px,
       671px 641px,
       cover;

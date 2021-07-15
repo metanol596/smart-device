@@ -42,7 +42,7 @@
 }
 
 .popup p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
 
@@ -53,7 +53,7 @@
 .popup__form input,
 .popup__form textarea {
   background-color: rgba($white, 0.1);
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -87,7 +87,7 @@
 .popup__form input:focus,
 .popup__form textarea:focus {
   color: $black;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -98,7 +98,7 @@
 
 .popup__form input::placeholder,
 .popup__form textarea::placeholder {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -141,7 +141,7 @@
 }
 
 .popup__form-consent-checkbox-wrap label {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: $white;

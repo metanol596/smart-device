@@ -14,13 +14,14 @@ accordionItems.forEach(item => {
 });
 "use strict";
 
-const phoneInput = document.querySelector('#phone');
+const phoneInputs = document.querySelectorAll(`input[type='tel']`);
 const maskOptions = {
   mask: '{+7}(000)000-00-00',
-  lazy: true,
-  placeholderChar: '_'
+  lazy: true
 };
-const mask = new IMask(phoneInput, maskOptions);
+phoneInputs.forEach(item => {
+  const mask = new IMask(item, maskOptions);
+});
 "use strict";
 
 const popupButton = document.querySelector('.page-header__order-call-button');
@@ -57,6 +58,7 @@ const onPopupButtonClick = () => {
   if (!popup.classList.contains('active')) {
     popup.classList.add('active');
     popupShadowBg.classList.add('active');
+    document.body.classList.add('page-body--no-scroll');
     popupNameInput.focus();
     popupInputs.forEach(item => {
       localStorage.setItem(`${item.name}`, `${item.value}`);
@@ -64,10 +66,9 @@ const onPopupButtonClick = () => {
     });
   } else {
     popupShadowBg.classList.remove('active');
+    document.body.classList.remove('page-body--no-scroll');
   }
 };
-
-for (let key, i = 0; i < localStorage.length; i++) key = localStorage.key(i), console.log(key, ':', localStorage.getItem(key));
 
 popupButton.addEventListener('click', onPopupButtonClick);
 popupCloseButton.addEventListener('click', onPopupCloseButtonClick);

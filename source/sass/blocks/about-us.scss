@@ -1,6 +1,4 @@
 .about-us {
-
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,6 +6,11 @@
 
   @media (max-width: 1200px) {
     padding: 0 calc(50% - 488px) 74px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0 0 84px;
+    align-items: flex-end;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -29,9 +32,9 @@
 
   @media (max-width: $desktop-width - 1) {
     background-image: url("../img/2005-tablet.png");
-    background-position: left -18px bottom 1px;
+    background-position: left -19px bottom -9px;
 
-    padding-left: 195px;
+    padding: 0 21px 0 192px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/2005-tablet@2x.png");
@@ -41,7 +44,7 @@
   @media (max-width: $mobile-only-width) {
     background-image: none;
 
-    padding: 0 16px 10px;
+    padding: 0 5px 10px 16px;
   }
 }
 
@@ -52,7 +55,14 @@
   color: $black-3;
 
   align-self: flex-start;
-  margin: 0 0 21px 0;
+  margin: 0 0 21px;
+
+  @media (max-width: $desktop-width - 1) {
+    font-size: 32px;
+    line-height: 45px;
+
+    margin: 0 0 24px;
+  }
 
   @media (max-width: $mobile-only-width) {
     font-size: 28px;
@@ -67,41 +77,45 @@
   margin-bottom: 40px;
 
   @media (max-width: $desktop-width - 1) {
-    max-width: 537px;
+    max-width: 538px;
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 288px;
+    width: 298px;
     margin-bottom: 28px;
   }
 }
 
 .about-us__text-wrap p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: $black-3;
 
   margin: 0 0 20px;
 
-  @media (max-width: $desktop-width - 1) {
-    &:nth-of-type(2) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-    }
-  }
-
   @media (max-width: $mobile-only-width) {
-  margin: 0 0 40px;
+    margin: 0 0 40px;
 
-  &:nth-of-type(2) {
-      -webkit-line-clamp: 8;
-
+    &:last-of-type {
       margin: 0;
     }
+  }
+}
+
+.about-us__text-cut-not-desktop {
+  display: none;
+
+  @media (max-width: $desktop-width - 1) {
+    display: inline;
+  }
+}
+
+.about-us__text-cut-desktop {
+  display: inline;
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
   }
 }
 

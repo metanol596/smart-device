@@ -1,9 +1,10 @@
-const phoneInput = document.querySelector('#phone');
+const phoneInputs = document.querySelectorAll(`input[type='tel']`);
 
 const maskOptions = {
   mask: '{+7}(000)000-00-00',
-  lazy: true,
-  placeholderChar: '_'
+  lazy: true
 };
 
-const mask = new IMask(phoneInput, maskOptions);
+phoneInputs.forEach((item) => {
+  const mask = new IMask(item, maskOptions);
+})

@@ -13,6 +13,10 @@
     right bottom -20px;
   padding: 91px calc(50% - 585px) 115px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/paper-airplane@2x.png");
+  }
+
   @media (max-width: 1440px) {
     background-image: none;
   }
@@ -23,13 +27,10 @@
 
   @media (max-width: $mobile-only-width) {
     padding: 30px calc(50% - 146px) 41px;
-
   }
 }
 
 .feedback__wrap {
-
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,7 @@
 }
 
 .feedback p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
 
@@ -90,7 +91,7 @@
   min-width: 540px;
 
   @media (max-width: $mobile-only-width) {
-    min-width: 290px
+    min-width: 290px;
   }
 }
 
@@ -112,11 +113,10 @@
   }
 }
 
-
 .feedback__form-inner-up-wrap input,
 .feedback__form textarea {
   background-color: rgba($white, 0.1);
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -138,7 +138,7 @@
   margin-bottom: 42px;
 
   @media (max-width: $desktop-width - 1) {
-    padding: 14px 46px 16px 19px;
+    padding: 14px 36px 16px 19px;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -167,7 +167,7 @@
 .feedback__form-inner-up-wrap input:focus,
 .feedback__form textarea:focus {
   color: $black;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -178,7 +178,7 @@
 
 .feedback__form input::placeholder,
 .feedback__form textarea::placeholder {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -234,7 +234,7 @@
 
 
 .feedback__form-consent-checkbox-wrap label {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: $white;

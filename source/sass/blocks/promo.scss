@@ -43,7 +43,7 @@
 }
 
 .promo p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 22px;
   line-height: 34px;
   text-transform: lowercase;
@@ -114,6 +114,7 @@
     margin-left: 50px;
     margin-bottom: 0;
     width: 379px;
+    padding-bottom: 18px;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -122,29 +123,29 @@
   }
 }
 
-.promo__to-feedback--link-desktop {
+.promo__to-feedback-link-not-mobile {
   display: inline-block;
   vertical-align: middle;
 
-  @media (max-width: $desktop-width - 1) {
+  @media (max-width: $mobile-only-width - 1) {
     display: none;
   }
 }
 
-.promo__to-feedback--link-not-desktop {
+.promo__to-feedback-link-mobile {
   display: none;
 
-  @media (max-width: $desktop-width - 1) {
+  @media (max-width: $mobile-only-width - 1) {
     display: inline-block;
     vertical-align: middle;
   }
 }
 
 .promo .promo__to-advantages-block {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: $white;
   opacity: 0.5;
 
   transform: rotate(-90deg) translateY(-31px);
