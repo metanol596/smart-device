@@ -200,6 +200,7 @@
             <label class="visually-hidden" for="phone-field"></label>
             <input type="tel" name="phone-field" id="phone-field" placeholder="Телефон">
           </div>
+          <label class="visually-hidden" for="feedback-field">Ваш вопрос</label>
           <textarea name="feedback" id="feedback-field" cols="53" rows="6" placeholder="Ваш вопрос"></textarea>
           <div class="feedback__form-inner-down-wrap">
             <button type="submit">Задать вопрос</button>
@@ -254,7 +255,7 @@
         </div>
       </div>
       <div class="page-footer__middle-wrap page-footer__accordion">
-        <div class="page-footer__sections-wrap page-footer__accordion-item">
+        <div class="page-footer__sections-wrap page-footer__accordion-item no-js">
           <div class="page-footer__sections-inner-wrap">
             <h3>Разделы сайта</h3>
             <ul class="page-footer__sections page-footer__accordion-item-body">
@@ -282,7 +283,7 @@
             </ul>
           </div>
         </div>
-        <div class="page-footer__address-block page-footer__accordion-item">
+        <div class="page-footer__address-block page-footer__accordion-item no-js">
           <h3>Наш офис</h3>
           <div class="page-footer__accordion-item-body">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
@@ -313,9 +314,10 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <label class="visually-hidden" for="name"></label>
-        <input class="popup__form-name-input for-storage" type="text" name="name" id="name" placeholder="Имя" required>
+        <input class="for-storage" type="text" name="name" id="name" placeholder="Имя" required>
         <label class="visually-hidden" for="phone"></label>
         <input class="for-storage" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+        <label class="visually-hidden" for="question-field">Ваш вопрос</label>
         <textarea class="for-storage" name="question-field" id="question-field" cols="36" rows="4" placeholder="Ваш вопрос"></textarea>
         <button type="submit">Отправить</button>
         <div class="popup__form-consent-checkbox-wrap">
