@@ -189,6 +189,7 @@
 .feedback__form-inner-down-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (max-width: $mobile-only-width) {
     flex-direction: column;

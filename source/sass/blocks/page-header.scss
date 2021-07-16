@@ -123,6 +123,7 @@
 .page-header__email-wrap p,
 .page-header__tel-wrap p {
   margin: 0;
+  word-break: break-word;
 
   @media (max-width: $desktop-width - 1) {
     display: none;
