@@ -15,18 +15,23 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/paper-airplane@2x.png");
+    background-size: 511px 288px;
   }
 
   @media (max-width: 1440px) {
-    background-image: none;
+    padding: 80px calc(50% - 496px) 104px;
+
+    background-position: left 0% top 177px;
   }
 
   @media (max-width: $desktop-width - 1) {
     padding: 80px calc(50% - 295px) 104px;
+
+    background-image: none;
   }
 
   @media (max-width: $mobile-only-width) {
-    padding: 30px calc(50% - 146px) 41px;
+    padding: 30px 15px 41px;
   }
 }
 
@@ -35,10 +40,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  @media (max-width: 1440px) {
-    align-items: center;
-  }
 
   @media (max-width: $desktop-width - 1) {
     align-items: flex-start;
@@ -91,7 +92,8 @@
   min-width: 540px;
 
   @media (max-width: $mobile-only-width) {
-    min-width: 290px;
+    min-width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -142,7 +144,7 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 290px;
+    width: 100%;
     padding: 10px 46px 16px 17px;
     height: 102px;
     margin-bottom: 27px;
@@ -159,7 +161,7 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 290px;
+    width: 100%;
     margin-bottom: 33px;
   }
 }
@@ -204,6 +206,8 @@
   text-transform: uppercase;
   color: $white;
 
+  cursor: pointer;
+
   background-color: transparent;
 
   text-align: center;
@@ -231,6 +235,14 @@
 .feedback__form-consent-checkbox-wrap {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $mobile-only-width) {
+    margin-right: 20px;
+  }
 }
 
 
@@ -266,4 +278,8 @@
   background-size: 8px 5px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.feedback__form-consent-checkbox-wrap input:focus + label::before {
+  outline: 1px solid $orange;
 }

@@ -1,50 +1,46 @@
 .about-us {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 calc(50% - 580px) 99px;
+  padding: 30px calc(50% - 622px) 108px calc(50% - 405px);
 
   @media (max-width: 1200px) {
-    padding: 0 calc(50% - 488px) 74px;
+    padding: 0 25px 74px calc(50% - 320px);
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: $desktop-width - 1) {
-    padding: 0 0 84px;
-    align-items: flex-end;
+    padding: 28px 25px 82px calc(50% - 174px);
   }
 
   @media (max-width: $mobile-only-width) {
-    padding: 0 0 54px;
+    padding: 18px calc(50% - 153px) 64px calc(50% - 145px);
+    align-items: center;
   }
 }
 
 .about-us__wrap {
-  background-image: url("../img/2005.png");
-  background-repeat: no-repeat;
-  background-position: left -32px bottom -2px;
+  position: relative;
 
-  padding-left: 180px;
-  padding-bottom: 10px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/2005@2x.png");
+  &::before {
+    content: url("../img/2005.png");
+    position: absolute;
+    left: -210px;
+    top: 5px;
   }
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/2005-tablet.png");
-    background-position: left -19px bottom -9px;
-
-    padding: 0 21px 0 192px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/2005-tablet@2x.png");
+    &::before {
+      content: url("../img/2005-tablet.png");
+      left: -211px;
+      top: -2px;
     }
   }
 
   @media (max-width: $mobile-only-width) {
     background-image: none;
 
-    padding: 0 5px 10px 16px;
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -54,7 +50,6 @@
   line-height: 51px;
   color: $black-3;
 
-  align-self: flex-start;
   margin: 0 0 21px;
 
   @media (max-width: $desktop-width - 1) {
@@ -73,15 +68,15 @@
 }
 
 .about-us__text-wrap {
-  max-width: 984px;
   margin-bottom: 40px;
+  width: 95%;
 
   @media (max-width: $desktop-width - 1) {
-    max-width: 538px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 298px;
     margin-bottom: 28px;
   }
 }

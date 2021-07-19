@@ -6,25 +6,28 @@ const popupNameInput = popup.querySelector('.popup__form-name-input');
 const popupInputs = popup.querySelectorAll('.for-storage');
 const popupForm = popup.querySelector('.popup__form');
 
-const onPopupCloseButtonClick = () => {
+const removeActiveClass = () => {
 	popup.classList.remove('active');
 	popupShadowBg.classList.remove('active');
+	document.body.classList.remove('page-body--no-scroll');
+}
+
+const onPopupCloseButtonClick = () => {
+	removeActiveClass();
 };
 
  const onEscButtonClick = (evt) => {
   if (evt.key === ('Escape' || 'Esc')) {
     if (popup.classList.contains('active')) {
       evt.preventDefault();
-      popup.classList.remove('active')
-			popupShadowBg.classList.remove('active');
+			removeActiveClass();
 		}
   }
 };
 
 const onPopupClick = (evt) => {
 	if (evt.target && evt.target.closest('.popup') && !evt.target.closest('.popup *')) {
-		popup.classList.remove('active')
-		popupShadowBg.classList.remove('active');
+		removeActiveClass();
 	}
 };
 
@@ -37,11 +40,7 @@ const onPopupButtonClick = () => {
 
 		popupInputs.forEach((item) => {
 			localStorage.setItem(`${item.name}`, `${item.value}`);
-			console.log(localStorage.getItem(`${item.placeholder}`));
 		});
-	} else {
-		popupShadowBg.classList.remove('active');
-		document.body.classList.remove('page-body--no-scroll');
 	}
 };
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Поставка электронных товаров">
-  <title>smart device</title>
+  <title>Smart Device</title>
   <link rel="preload" href="fonts/roboto-v27-cyrillic-500.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
@@ -16,14 +16,13 @@
     <header class="page-header page-body__page-header">
       <div class="page-header__logo-wrap">
         <a class="page-header__logo-icon-wrap">
+          <svg class="page-header__full-logo-icon" width="202" height="52" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#full-logo"></use>
+          </svg>
           <svg class="page-header__logo-icon" width="52" height="52" aria-hidden="true">
             <use xlink:href="img/icons/sprite.svg#logo"></use>
           </svg>
         </a>
-        <div class="page-header__logo-name-inner-wrap">
-          <p class="page-header__logo-name">Smart Device</p>
-          <p class="page-header__logo-slogan">Умные технологии</p>
-        </div>
       </div>
       <div class="page-header__flex-to-right-wrap">
         <div class="page-header__contacts-block">
@@ -62,7 +61,7 @@
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
-          <span class="advantages__item-icon-wrap">
+          <span class="advantages__item-icon-wrap advantages__item-icon-wrap--stopwatch">
             <svg width="29" height="35" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#stopwatch"></use>
             </svg>
@@ -76,7 +75,7 @@
           </p>
         </li>
         <li class="advantages__item">
-          <span class="advantages__item-icon-wrap">
+          <span class="advantages__item-icon-wrap advantages__item-icon-wrap--hired">
             <svg width="35" height="35" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#hired"></use>
             </svg>
@@ -90,7 +89,7 @@
           </p>
         </li>
         <li class="advantages__item">
-          <span class="advantages__item-icon-wrap">
+          <span class="advantages__item-icon-wrap advantages__item-icon-wrap--detective">
             <svg width="36" height="31" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#detective"></use>
             </svg>
@@ -102,7 +101,7 @@
           </p>
         </li>
         <li class="advantages__item">
-          <span class="advantages__item-icon-wrap">
+          <span class="advantages__item-icon-wrap advantages__item-icon-wrap--tag">
             <svg width="35" height="35" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#tag"></use>
             </svg>
@@ -121,12 +120,11 @@
         <h2>О компании</h2>
         <div class="about-us__text-wrap">
           <p>
-            Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
-            с 1997&nbsp;года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+            Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
           </p>
           <p>
-            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Печатные&nbsp;платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-us__text-cut-desktop">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+            Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог<span class="about-us__text-cut-desktop"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
             Производители светотехники России.</span><span class="about-us__text-cut-not-desktop">...</span>
           </p>
         </div>
@@ -146,8 +144,8 @@
             </span>
             <picture>
               <source media="(max-width: 767px)" srcset="img/features-1-mobile.webp 1x, img/features-1-mobile@2x.webp 2x" type="image/webp">
-              <source media="(max-width: 1200px)" srcset="img/features-1-tablet.webp 1x, img/features-1-tablet@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1201px)" srcset="img/features-1.webp 1x, img/features-1@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/features-1-tablet.webp 1x, img/features-1-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1024px)" srcset="img/features-1.webp 1x, img/features-1@2x.webp 2x" type="image/webp">
               <img src="img/features-1.png" loading="lazy" width="370" height="620" alt="Производство печатных плат">
               <!-- 1х: 370px/620px; 2x: 740px/1240px -->
             </picture>
@@ -163,8 +161,8 @@
             </span>
             <picture>
               <source media="(max-width: 767px)" srcset="img/features-2-mobile.webp 1x, img/features-2-mobile@2x.webp 2x" type="image/webp">
-              <source media="(max-width: 1200px)" srcset="img/features-2-tablet.webp 1x, img/features-2-tablet@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1201px)" srcset="img/features-2.webp 1x, img/features-2@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/features-2-tablet.webp 1x, img/features-2-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1024px)" srcset="img/features-2.webp 1x, img/features-2@2x.webp 2x" type="image/webp">
               <img src="img/features-2.png" loading="lazy" width="370" height="620" alt="Монтаж печатных плат">
               <!-- 1х: 370px/620px; 2x: 740px/1240px -->
             </picture>
@@ -180,8 +178,8 @@
             </span>
             <picture>
               <source media="(max-width: 767px)" srcset="img/features-3-mobile.webp 1x, img/features-3-mobile@2x.webp 2x" type="image/webp">
-              <source media="(max-width: 1200px)" srcset="img/features-3-tablet.webp 1x, img/features-3-tablet@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1201px)" srcset="img/features-3.webp 1x, img/features-3@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/features-3-tablet.webp 1x, img/features-3-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1024px)" srcset="img/features-3.webp 1x, img/features-3@2x.webp 2x" type="image/webp">
               <img src="img/features-3.png" loading="lazy" width="370" height="620" alt="Комплектующие для светотехники">
               <!-- 1х: 370px/620px; 2x: 740px/1240px -->
             </picture>
@@ -219,14 +217,10 @@
         <div class="page-footer__upper-inner-wrap">
           <div class="page-footer__logo-wrap">
             <a class="page-footer__logo-icon-wrap">
-              <svg class="page-footer__logo-icon" width="52" height="52" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              <svg class="page-footer__logo-icon" width="216" height="52" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#footer-logo"></use>
               </svg>
             </a>
-            <div class="page-footer__logo-name-inner-wrap">
-              <p class="page-footer__logo-name">Service Device</p>
-              <p class="page-footer__logo-slogan">Умные технологии</p>
-            </div>
           </div>
           <p class="page-footer__inner-wrap-item-none">1999-2018 SD Service Devices</p>
           <ul class="page-footer__socials">
@@ -287,9 +281,11 @@
           <h3>Наш офис</h3>
           <div class="page-footer__accordion-item-body">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
-            <p>+7 (495) 589-40-50</p>
-            <p>+7 (925) 003-87-67</p>
-            <p>+7 (926) 926-080-79</p>
+            <div class="page-footer__accordion-item-inner-wrap">
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a href="tel:+74950038767">+7 (925) 003-87-67</a>
+              <a href="tel:+749592608079">+7 (926) 926-080-79</a>
+            </div>
           </div>
         </div>
       </div>
@@ -314,7 +310,7 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <label class="visually-hidden" for="name"></label>
-        <input class="for-storage" type="text" name="name" id="name" placeholder="Имя" required>
+        <input class="popup__form-name-input for-storage" type="text" name="name" id="name" placeholder="Имя" required>
         <label class="visually-hidden" for="phone"></label>
         <input class="for-storage" type="tel" name="phone" id="phone" placeholder="Телефон" required>
         <label class="visually-hidden" for="question-field">Ваш вопрос</label>

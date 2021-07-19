@@ -136,6 +136,8 @@
 
 .popup__form-consent-checkbox-wrap input {
   width: 1px;
+  padding: 0;
+  border: 0;
 }
 
 .popup__form-consent-checkbox-wrap label {
@@ -166,4 +168,8 @@
   background-size: 8px 5px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.popup__form-consent-checkbox-wrap input:focus + label::before {
+  outline: 1px solid $orange;
 }

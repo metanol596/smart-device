@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    padding: 0 calc(50% - 145px) 70px;
+    padding: 0 15px 70px;
   }
 }
 
@@ -24,21 +24,20 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
 
-  margin: 0 0 31px 0;
+  margin: 0 0 29px;
 
   @media (max-width: $desktop-width - 1) {
     font-size: 60px;
     line-height: 70px;
     width: 393px;
-    margin: 0 0 29px 0;
   }
 
   @media (max-width: $mobile-only-width) {
     font-size: 40px;
     line-height: 47px;
 
-    width: 280px;
-    margin: 0 0 27px 0;
+    width: 100%;
+    margin: 0 0 27px;
   }
 }
 
@@ -49,7 +48,7 @@
   text-transform: lowercase;
 
   width: 739px;
-  margin: 0 0 39px 0;
+  margin: 0 0 41px;
   padding: 0 0 0 100px;
   position: relative;
 
@@ -69,20 +68,25 @@
     }
   }
 
+  @media (max-width: 1440px) {
+    width: 50%;
+  }
+
   @media (max-width: $desktop-width - 1) {
     font-size: 18px;
     line-height: 28px;
 
     width: 547px;
     padding: 0 0 0 51px;
-    margin: 0 0 55px 0;
+    margin: 0 0 55px;
   }
 
   @media (max-width: $mobile-only-width) {
     font-size: 16px;
     line-height: 25px;
 
-    width: 280px;
+    width: 100%;
+    padding: 0 0 0 47px;
     margin: 0 0 40px;
   }
 }
@@ -150,6 +154,10 @@
 
   transform: rotate(-90deg) translateY(-31px);
   width: max-content;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media (max-width: $desktop-width - 1) {
     display: none;

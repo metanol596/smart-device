@@ -28,34 +28,20 @@
   margin-right: 16px;
 }
 
-.page-header__logo-icon-wrap svg {
+.page-header__logo-icon-wrap .page-header__logo-icon {
+  display: none;
+
   @media (max-width: $mobile-only-width) {
+    display: inline-block;
+    vertical-align: middle;
     width: 38px;
     height: 38px;
   }
 }
 
-.page-header__logo-name {
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-
-  margin: 0;
-
-  @media (max-width: $mobile-only-width) {
-    display: none;
-  }
-}
-
-.page-header__logo-slogan {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: $blue;
-  text-transform: lowercase;
-
-  margin: 0;
+.page-header__logo-icon-wrap .page-header__full-logo-icon {
+  display: inline-block;
+  vertical-align: middle;
 
   @media (max-width: $mobile-only-width) {
     display: none;

@@ -17,6 +17,8 @@ accordionItems.forEach(item => {
 });
 "use strict";
 
+const MAX_TEL_NUMBER = 16;
+const NO_VALID_TEL_TEXT = 'Номер не может быть короче 10 цифр';
 const phoneInputs = document.querySelectorAll(`input[type='tel']`);
 const maskOptions = {
   mask: '{+7}(000)000-00-00',
@@ -24,6 +26,15 @@ const maskOptions = {
 };
 phoneInputs.forEach(item => {
   const mask = new IMask(item, maskOptions);
+});
+phoneInputs.forEach(item => {
+  item.addEventListener('input', () => {
+    if (item.value.length < MAX_TEL_NUMBER) {
+      item.setCustomValidity(NO_VALID_TEL_TEXT);
+    } else {
+      item.setCustomValidity('');
+    }
+  });
 });
 "use strict";
 
@@ -35,25 +46,28 @@ const popupNameInput = popup.querySelector('.popup__form-name-input');
 const popupInputs = popup.querySelectorAll('.for-storage');
 const popupForm = popup.querySelector('.popup__form');
 
-const onPopupCloseButtonClick = () => {
+const removeActiveClass = () => {
   popup.classList.remove('active');
   popupShadowBg.classList.remove('active');
+  document.body.classList.remove('page-body--no-scroll');
+};
+
+const onPopupCloseButtonClick = () => {
+  removeActiveClass();
 };
 
 const onEscButtonClick = evt => {
   if (evt.key === ('Escape' || 'Esc')) {
     if (popup.classList.contains('active')) {
       evt.preventDefault();
-      popup.classList.remove('active');
-      popupShadowBg.classList.remove('active');
+      removeActiveClass();
     }
   }
 };
 
 const onPopupClick = evt => {
   if (evt.target && evt.target.closest('.popup') && !evt.target.closest('.popup *')) {
-    popup.classList.remove('active');
-    popupShadowBg.classList.remove('active');
+    removeActiveClass();
   }
 };
 
@@ -65,11 +79,7 @@ const onPopupButtonClick = () => {
     popupNameInput.focus();
     popupInputs.forEach(item => {
       localStorage.setItem(`${item.name}`, `${item.value}`);
-      console.log(localStorage.getItem(`${item.placeholder}`));
     });
-  } else {
-    popupShadowBg.classList.remove('active');
-    document.body.classList.remove('page-body--no-scroll');
   }
 };
 
@@ -77,3 +87,16 @@ popupButton.addEventListener('click', onPopupButtonClick);
 popupCloseButton.addEventListener('click', onPopupCloseButtonClick);
 popup.addEventListener('click', onPopupClick);
 window.addEventListener('keydown', onEscButtonClick);
+"use strict";
+
+const menuAnchors = document.querySelectorAll('.promo a');
+menuAnchors.forEach(anchor => {
+  anchor.addEventListener('click', evt => {
+    evt.preventDefault();
+    const blockId = anchor.getAttribute('href');
+    document.querySelector(blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});

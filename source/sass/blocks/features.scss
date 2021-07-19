@@ -4,12 +4,17 @@
   min-height: 650px;
   padding: 88px calc(50% - 585px) 127px;
 
-  @media (max-width: 1200px) {
+  @media (min-width: $desktop-width) and (max-width: 1200px) {
+    padding: 88px calc(50% - 408px) 127px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
     padding: 50px calc(50% - 360px) 78px;
   }
 
+
   @media (max-width: $mobile-only-width) {
-    padding: 50px calc(50% - 149px) 64px;
+    padding: 50px 15px 64px;
   }
 }
 
@@ -21,7 +26,7 @@
 
   margin: 0 0 52px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     font-size: 32px;
     line-height: 45px;
 
@@ -33,7 +38,7 @@
     font-size: 28px;
     line-height: 39px;
 
-    width: 299px;
+    width: 95%;
     margin: 0 0 42px 10px;
   }
 }
@@ -43,12 +48,12 @@
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 370px);
+  grid-template-columns: repeat(auto-fill, 370px);
   column-gap: 30px;
   row-gap: 30px;
   min-height: 620px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     grid-template-columns: 715px;
     grid-template-rows: repeat(3, minmax(256px, 1fr));
     justify-content: center;
@@ -56,7 +61,7 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    grid-template-columns: 290px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 720px));
     row-gap: 30px;
   }
 }
@@ -78,7 +83,7 @@
   min-height: 620px;
   width: 100%;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     min-height: 256px;
   }
 }
@@ -93,7 +98,7 @@
   padding: 49px 0 0 43px;
   width: 216px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     padding: 40px 0 0 42px;
   }
 
@@ -110,7 +115,7 @@
   padding: 26px 29px;
   background-color: $blue-1;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     right: -3px;
   }
 
@@ -130,13 +135,14 @@
   opacity: 0.2;
   object-fit: cover;
   width: 370px;
+  height: 620px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $desktop-width - 1) {
     width: 720px;
     height: 256px;
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 290px;
+    width: 100%;
   }
 }
