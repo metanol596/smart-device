@@ -1,33 +1,46 @@
 .feedback {
   background-color: $blue-1;
   background-image:
-    url("../img/paper-airplane.png"),
-    url("../img/group-triangles.svg"),
     url("../img/triangle235x235.svg"),
     url("../img/triangle373x373.svg");
   background-repeat: no-repeat;
   background-position:
-    left 25% top 161px,
-    left 175px top -60px,
-    right 14px top 43px,
-    right bottom -20px;
-  padding: 91px calc(50% - 585px) 115px;
+    right 12px top 43px,
+    right -78px bottom -21px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/paper-airplane@2x.png");
-    background-size: 511px 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $desktop-width - 1) {
+    background-image: none;
   }
+}
+
+.feedback__container {
+  max-width: 1545px;
+  width: 100%;
+  padding: 91px 0 115px;
+  position: relative;
+
+  background-image: url("../img/group-triangles.svg");
+  background-repeat: no-repeat;
+  background-position: left -13px top -61px;
 
   @media (max-width: 1440px) {
-    padding: 80px calc(50% - 496px) 104px;
+    background-size: 503px auto;
+    background-position: left 33px top -5px;
+  }
 
-    background-position: left 0% top 177px;
+  @media (max-width: 1300px) {
+    background-size: 377px auto;
+    background-position: left 64px top 37px;
   }
 
   @media (max-width: $desktop-width - 1) {
-    padding: 80px calc(50% - 295px) 104px;
-
     background-image: none;
+
+    padding: 80px calc(50% - 295px) 104px;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -35,14 +48,39 @@
   }
 }
 
+.feedback__container img {
+  position: absolute;
+  top: 161px;
+  left: 162px;
+
+  @media (max-width: 1440px) {
+    width: 383px;
+    height: auto;
+  }
+
+  @media (max-width: 1300px) {
+    width: 287px;
+    left: 115px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
 .feedback__wrap {
-  width: 100%;
+  width: 88%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
+  @media (max-width: 1300px) {
+    width: 95%;
+  }
+
   @media (max-width: $desktop-width - 1) {
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
   }
 }
 
@@ -59,13 +97,13 @@
     line-height: 45px;
 
     margin: 0 0 16px;
+    width: 100%;
   }
 
   @media (max-width: $mobile-only-width) {
     font-size: 28px;
     line-height: 39px;
 
-    width: 245px;
     margin: 0 0 14px;
   }
 }
@@ -80,10 +118,10 @@
 
   @media (max-width: $desktop-width - 1) {
     margin: 0 0 54px;
+    width: 98%;
   }
 
   @media (max-width: $mobile-only-width) {
-    width: 275px;
     margin: 0 0 25px;
   }
 }
@@ -91,9 +129,14 @@
 .feedback__form {
   min-width: 540px;
 
+  @media (max-width: $desktop-width - 1) {
+    margin-left: 7px;
+  }
+
   @media (max-width: $mobile-only-width) {
     min-width: 100%;
     max-width: 280px;
+    margin: 0;
   }
 }
 
@@ -158,11 +201,13 @@
 
   @media (max-width: $desktop-width - 1) {
     width: 280px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $mobile-only-width) {
     width: 100%;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
+    padding-bottom: 19px;
   }
 }
 
@@ -237,6 +282,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  position: relative;
 
   list-style: none;
 
@@ -244,7 +290,6 @@
     margin-right: 20px;
   }
 }
-
 
 .feedback__form-consent-checkbox-wrap label {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -271,6 +316,11 @@
   @media (max-width: $desktop-width - 1) {
     width: 270px;
   }
+}
+
+.feedback__form-consent-checkbox-wrap input {
+  right: 258px;
+  bottom: 0;
 }
 
 .feedback__form-consent-checkbox-wrap input:checked + label::before {

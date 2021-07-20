@@ -47,13 +47,26 @@
       </div>
     </header>
     <section class="promo">
-      <h1>Печатные платы</h1>
-      <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="promo__to-feedback-block" href="#feedback">
-        <span class="promo__to-feedback-link-not-mobile">Получить бесплатную консультацию</span>
-        <span class="promo__to-feedback-link-mobile">Бесплатная консультация</span>
-      </a>
-      <a class="promo__to-advantages-block" href="#advantages">Скролл вниз</a>
+      <div class="promo__container">
+        <div class="promo__wrap">
+          <h1>Печатные платы</h1>
+          <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="promo__to-feedback-block" href="#feedback">
+            <span class="promo__to-feedback-link-not-mobile">Получить бесплатную консультацию</span>
+            <span class="promo__to-feedback-link-mobile">Бесплатная консультация</span>
+          </a>
+          <a class="promo__to-advantages-block" href="#advantages">Скролл вниз</a>
+        </div>
+        <div class="promo__img-container">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/chips-bg-mobile.webp 1x, img/chips-bg-mobile@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/chips-bg-tablet.webp 1x, img/chips-bg-tablet@2x.webp 2x">
+            <source media="(min-width: 1024px)" srcset="img/chips-bg.webp 1x, img/chips-bg@2x.webp 2x">
+            <img src="img/chips-bg.png" alt="Печатные платы" width="705" height="515px">
+            <!-- 1х: 705px/515px; 2x: 705px/515px  -->
+          </picture>
+        </div>
+      </div>
     </section>
   </div>
   <main class="page-main">
@@ -188,26 +201,33 @@
       </ul>
     </section>
     <section class="feedback" id="feedback">
-      <div class="feedback__wrap">
-        <h2>Остались вопросы? Задайте их нам!</h2>
-        <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-          <div class="feedback__form-inner-up-wrap">
-            <label class="visually-hidden" for="name-field"></label>
-            <input type="text" name="name-field" id="name-field" placeholder="Имя" required>
-            <label class="visually-hidden" for="phone-field"></label>
-            <input type="tel" name="phone-field" id="phone-field" placeholder="Телефон" required>
-          </div>
-          <label class="visually-hidden" for="feedback-field">Ваш вопрос</label>
-          <textarea name="feedback" id="feedback-field" cols="53" rows="6" placeholder="Ваш вопрос"></textarea>
-          <div class="feedback__form-inner-down-wrap">
-            <button type="submit">Задать вопрос</button>
-            <div class="feedback__form-consent-checkbox-wrap">
-              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked required>
-              <label for="consent">Я согласен на обработку персональных данных</label>
+      <div class="feedback__container">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x" type="image/webp">
+          <img src="img/paper-airplane.png" loading="lazy" width="511" height="288px" alt="Самолётик">
+        <!-- 1х: 511px/288px; 2x: 511px/288px -->
+        </picture>
+        <div class="feedback__wrap">
+          <h2>Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+            <div class="feedback__form-inner-up-wrap">
+              <label class="visually-hidden" for="name-field"></label>
+              <input type="text" name="name-field" id="name-field" placeholder="Имя" required>
+              <label class="visually-hidden" for="phone-field"></label>
+              <input type="tel" name="phone-field" id="phone-field" placeholder="Телефон" required>
             </div>
-          </div>
-        </form>
+            <label class="visually-hidden" for="feedback-field">Ваш вопрос</label>
+            <textarea name="feedback" id="feedback-field" cols="53" rows="6" placeholder="Ваш вопрос"></textarea>
+            <div class="feedback__form-inner-down-wrap">
+              <button type="submit">Задать вопрос</button>
+              <div class="feedback__form-consent-checkbox-wrap">
+                <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked required>
+                <label for="consent">Я согласен на обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>

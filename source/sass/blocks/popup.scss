@@ -3,17 +3,26 @@
 
   display: none;
   width: 490px;
+  height: 605px;
+  max-height: 100%;
   padding: 30px 39px 36px;
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
   margin: auto;
   z-index: 101;
+
+  overflow-y: auto;
 }
 
 .popup.active {
   display: block;
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
 }
 
 .popup__inner-wrap {
@@ -138,6 +147,8 @@
   width: 1px;
   padding: 0;
   border: 0;
+  bottom: -22px;
+  left: 8px;
 }
 
 .popup__form-consent-checkbox-wrap label {

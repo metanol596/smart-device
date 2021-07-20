@@ -12,7 +12,6 @@
     padding: 50px calc(50% - 360px) 78px;
   }
 
-
   @media (max-width: $mobile-only-width) {
     padding: 50px 15px 64px;
   }
@@ -53,6 +52,12 @@
   row-gap: 30px;
   min-height: 620px;
 
+  @media (min-width: $desktop-width) and (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, 260px);
+    column-gap: 18px;
+    min-height: 439px;
+  }
+
   @media (max-width: $desktop-width - 1) {
     grid-template-columns: 715px;
     grid-template-rows: repeat(3, minmax(256px, 1fr));
@@ -72,6 +77,10 @@
   &:hover {
     outline: 1px solid $blue-1;
     outline-offset: 15px;
+
+    @media (min-width: $desktop-width) and (max-width: 1200px) {
+      outline-offset: 9px;
+    }
   }
 }
 
@@ -82,6 +91,11 @@
   flex-direction: column;
   min-height: 620px;
   width: 100%;
+
+  @media (min-width: $desktop-width) and (max-width: 1200px) {
+    width: 260px;
+    min-height: 439px;
+  }
 
   @media (max-width: $desktop-width - 1) {
     min-height: 256px;
@@ -136,6 +150,11 @@
   object-fit: cover;
   width: 370px;
   height: 620px;
+
+  @media (min-width: $desktop-width) and (max-width: 1200px) {
+    width: 260px;
+    height: 438px;
+  }
 
   @media (max-width: $desktop-width - 1) {
     width: 720px;
