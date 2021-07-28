@@ -616,6 +616,7 @@ a {
 }
 @media (max-width: 1200px) {
   .advantages__list {
+    grid-template-columns: repeat(auto-fit, 457px);
     justify-content: center;
   }
 }
